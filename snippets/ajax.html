@@ -1,0 +1,67 @@
+<div class="row">
+        <a class="anchor" id="ajax"></a>
+        <h3 class="row-heading">AJAX</h3>
+        <div class="col-40">
+            <div class="card">
+                <pre>
+                    <code>
+&ltdiv class="topnav"&gt
+&lta href="javascript:void(0);"
+onclick="openContent('home')" 
+id="icon" class="topnav-link" &gt
+&ltdiv class="fa fa-bars"&gt&lt/div&gt
+&lt/a&gt
+&lta  href="javascript:void(0);" 
+onclick="loadSnippet('home')"
+class="topnav-link"&gtHome&lt/a&gt
+&lta  href="javascript:void(0);" 
+onclick="loadSnippet('a')" 
+class="topnav-link"&gtA&lt/a&gt
+&lta  href="javascript:void(0);" 
+onclick="loadSnippet('b')" 
+class="topnav-link"&gtB&lt/a&gt
+&lta  href="javascript:void(0);" 
+onclick="loadSnippet('c')" 
+class="topnav-link"&gtC&lt/a&gt
+&lt/div&gt
+
+
+&ltdiv id="div1"&gt&lt/div&gt
+
+
+
+&ltscript src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt&lt/script&gt
+&ltscript&gt
+function showMenu() {
+var elements = document.getElementsByClassName("topnav-link");
+for (var i = 0; i &lt elements.length; i++) {
+if (elements[i].className === "topnav-link") {
+elements[i].className += " responsive";
+} else {
+elements[i].className = "topnav-link";
+}
+}
+}
+
+function loadSnippet(fileName){
+console.log(fileName);
+$("#div1").load("snippets/"+fileName+".html");
+}
+loadSnippet("home")
+&lt/script&gt        
+                </code>
+                </pre>                   
+            </div>
+        </div>
+        <div class="col-60">
+            <div class="card">
+                <p>
+                        AJAX method looks the most simple but is the hardest to understand. If you want to go down this route I will need to tell you about JQuery and about running in a local server. What this does is to load parts of the web page up dynamically. It is very powerful and useful and worth the effort of understanding<a href="topnavajax.html">HERE</a> is a link to a version that does this.   
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+
+

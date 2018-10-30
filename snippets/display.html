@@ -1,0 +1,69 @@
+<div class="row">
+        <a class="anchor" id="display"></a>
+        <h3 class="row-heading">Display</h3>
+        <div class="col-40">
+            <div class="card">
+                <pre>
+                    <code>
+&ltdiv class="topnav"&gt
+&lta href="javascript:void(0);" 
+onclick="openContent('home')" 
+id="icon" class="topnav-link" &gt
+&ltdiv class="fa fa-bars"&gt&lt/div&gt
+&lt/a&gt
+&lta  href="javascript:void(0);" 
+onclick="openContent('home')"class="topnav-link"
+&gtHome&lt/a&gt
+&lta  href="javascript:void(0);" 
+onclick="openContent('a')" class="topnav-link"
+&gtA&lt/a&gt
+&lta  href="javascript:void(0);" 
+onclick="openContent('b')" class="topnav-link"
+&gtB&lt/a&gt
+&lta  href="javascript:void(0);" 
+onclick="openContent('c')" class="topnav-link"
+&gtC&lt/a&gt
+&lt/div&gt
+
+
+
+
+&lth4 class="content" id="home" style="display:block"&gtHome&lt/h4&gt
+&lth4 class="content" id="a" style="display:none"&gtA&lt/h4&gt
+&lth4 class="content" id="b" style="display:none"&gtB&lt/h4&gt
+&lth4 class="content" id="c" style="display:none"&gtC&lt/h4&gt
+
+&ltscript&gt
+function showMenu() {
+var elements = document.getElementsByClassName("topnav-link");
+for (var i = 0; i &lt elements.length; i++) {
+if (elements[i].className === "topnav-link") {
+elements[i].className += " responsive";
+} else {
+elements[i].className = "topnav-link";
+}
+}
+}
+
+function openContent(cntName) {
+cnt = document.getElementsByClassName("content");
+for (var i = 0; i &lt cnt.length; i++) {
+cnt[i].style.display = "none";
+}
+element = document.getElementById(cntName);
+element.style.display = "block";
+}
+&lt/script&gt         
+                </code>
+                </pre>                   
+            </div>
+        </div>
+        <div class="col-60">
+            <div class="card">
+                <p>
+                        Display loads all of the page content up but hids sections of it using “display:none”. It then uses JavaScript to hide all of the content and only show the single element selected. This is quite complicated so if you want to try this as me to run through it with you.<a href="topnavshow.html">HERE</a> is a link to a version that does this.   
+                </p>
+
+            </div>
+        </div>
+    </div>
